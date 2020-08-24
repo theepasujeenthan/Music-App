@@ -12,10 +12,10 @@ SC.initialize({
           });
 
           //pause button
-    $('#pause1').click(function(e) {
+    /*$('#pause1').click(function(e) {
       e.preventDefault();
       sound.pause();
-    });
+    });*/
      //stop button
 
           $('#stop1').click(function(e) {
@@ -24,9 +24,11 @@ SC.initialize({
           });
  
     });
+  });
 
 //song2
 SC.stream('/tracks/345946410',function(sound){ 
+      $(document).ready(function() { 
     $('#start2').click(function(e) {
         e.preventDefault();
         sound.start();
@@ -43,7 +45,7 @@ SC.stream('/tracks/345946410',function(sound){
         e.preventDefault();
         sound.stop();
       });
-
+      });
 });
 //song3
 SC.stream('/tracks/345823373',function(sound){ 
